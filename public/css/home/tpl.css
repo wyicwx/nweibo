@@ -1,0 +1,177 @@
+/*
+	@ 名称: 投影 | drop shadow
+	@ 用法: 添加 .sl-shadow
+	@ 实例: 
+
+      <div class="sl-shadow">
+      	<!-- your context to go -->
+      </div><!-- .sl-shadow -->
+
+*/
+
+.sl-shadow{
+	/* modern web browsers */
+	-moz-box-shadow:1px 3px 12px #bbb;
+	-webkit-box-shadow:1px 3px 12px #bbb;
+	box-shadow:1px 3px 12px #bbb;
+
+	/* 一定要设置background, 不然 ie 会显示在字体上 */
+	background: transparent;
+
+	/* gte=ie8 */
+	-ms-filter:"progid:DXImageTransform.Microsoft.Glow(color=#aaaaaa,strength=3) progid:DXImageTransform.Microsoft.Shadow(color=#eeeeee,direction=0,strength=6) progid:DXImageTransform.Microsoft.Shadow(color=#dddddd,direction=90,strength=10) progid:DXImageTransform.Microsoft.Shadow(color=#dddddd,direction=180,strength=6) progid:DXImageTransform.Microsoft.Shadow(color=#eeeeee,direction=270,strength=6)";
+
+	/* lte=ie7 */
+	*filter:
+    progid:DXImageTransform.Microsoft.Shadow(color=#eeeeee,direction=0,strength=7)
+    progid:DXImageTransform.Microsoft.Shadow(color=#dddddd,direction=90,strength=10)
+    progid:DXImageTransform.Microsoft.Shadow(color=#dddddd,direction=180,strength=10)
+    progid:DXImageTransform.Microsoft.Shadow(color=#eeeeee,direction=270,strength=7);
+}
+
+
+/*
+ * @name: 微博发布框
+ * @overview: 发布微薄的发布框
+ * @require: image(/images/send_weibo.png);
+ */
+.ui-wTextarea {
+	width: 540px;
+}
+.ui-wTextarea-top, .ui-wTextarea-input, .ui-wTextarea-input-bottom, .ui-wTextarea-btn a {
+	background-image: url(/images/send_weibo.png);
+}
+.ui-wTextarea-top {
+	width: 240px;
+	height: 24px;
+}
+.ui-wTextarea-input {
+	padding-top: 5px;
+	margin: 7px 0 3px 0;
+	background-position: -3px -30px;
+}
+.ui-wTextarea-area {
+	width: 530px;
+	height: 100%;
+	margin: auto;
+	display: block;
+	border: none;
+	overflow: hidden;
+}
+.ui-wTextarea-input-bottom {
+	height: 55px;
+	padding-bottom: 5px;
+	background-position: -3px -107px;
+}
+.ui-wTextarea-btn {
+	float: right;
+}
+.ui-wTextarea-btn a {
+	border: 0;
+	width: 70px;
+	height: 28px;
+	background-position: -473px -1px;
+	display: block;
+}
+.ui-wTextarea-operations {
+	padding: 5px 0 25px 0;
+}
+.ui-wTextarea-operations a {
+	height: 14px;
+	margin: 0 15px 0 0;
+	padding: 2px 0 2px 19px;
+	display: inline-block;
+	line-height: 14px;
+	background: url(/images/icon.png) no-repeat;
+}
+.ui-wTextarea-operations .face {
+	background-position: 0 1px;
+}
+.ui-wTextarea-operations .img {
+	background-position: 0 -32px
+}
+.ui-wTextarea-operations .movie {
+	background-position: 0 -67px;
+}
+.ui-wTextarea-operations .music {
+	background-position: 0 -100px;
+}
+.ui-wTextarea-operations .topic {
+	background-position: 0 -135px;
+}
+.ui-wTextarea-operations .vote {
+	background-position: 0 -170px;
+}
+
+/*  status   */
+.ui-wTextarea-btn .ui-wTextarea-btn-disable {
+	background-position: -403px -1px;
+}
+
+/*
+ *  @name: 微博状态头像
+ *  @overview: 微博头像
+ *  @require: null
+ */
+.ui-feedAvatar {
+	float: left;
+	display: inline;
+	width: 50px;
+	padding: 3px 0 6px;
+}
+.ui-feedAvatar-img {
+	width: 50px;
+	height: 50px;
+	display: block;
+}
+
+
+/*
+ * @name: 微博状态
+ * @overview: null
+ * @require: 微博状态头像、微博原文内容
+ */
+.ui-feed {
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+	zoom: 1;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-color: #E1E4E5;
+}
+.ui-feed-content {
+	font-size: 14px;
+	margin: 0 0 0 60px;
+	line-height: 22px;
+}
+
+
+/*
+ * @name: 微博原文内容
+ * @overview: null
+ * @require: null
+ */
+.ui-publishContent {
+	padding-bottom: 10px;
+}
+
+/*
+ * @name: 微博状态操作
+ * @overview: null
+ * @require: null
+ */
+.ui-feedOperations {
+	padding: 3px 0 0;
+	font-size: 12px;
+	color: #999;
+}
+.ui-feedOperations a {
+	color: #6EAFD5;
+}
+.ui-feedOperations span {
+	float: right;
+}
+.ui-feedOperations-line {
+	margin: 0 5px;
+	color: #E1E4E5;
+}

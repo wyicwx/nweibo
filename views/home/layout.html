@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>我的首页 N微博-随时随地分享身边的新鲜事儿 </title>
+		<meta name="description" content="" />
+		<meta name="author" content="N微博" />
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<link rel="stylesheet" href="/css/base.css" />
+		<link rel="stylesheet" href="/css/global.css" />
+		
+		<% if(typeof bodyCss != "undefined") {	//添加页面单独的css
+			  for(var i in bodyCss) {
+		%>
+		<link rel="stylesheet" href="<%- bodyCss[i] %>" />
+		<%    }
+			}
+		%>
+		<script src="/js/html5.js"></script>
+		<% if(typeof bodyJs != "undefined") {	//添加页面单独的js
+			  for(var j in bodyJs) {
+		%>
+		<script src="<%- bodyJs[j] %>"></script>
+		<%    }
+			}
+		%>
+	</head>
+	<body>
+		<!-- 顶部导航 -->
+		<header>
+			<div  class="global-header fn-clear">
+				<div class="logo fn-left">
+					<a href="/">
+						N微博 By nodejs
+					</a>
+				</div>
+				<div class="nav fn-left"></div>
+				<div class="search fn-left"></div>
+				<div class="person fn-left"></div>
+			</div>
+		</header>
+		<!--/顶部导航-->
+		
+		<%- body %>
+		
+		<!-- 底部 -->
+		<footer>
+			<p>
+				&copy; Copyright  by maple
+			</p>
+		</footer>
+		<!-- /底部 -->
+	</body>
+</html>
