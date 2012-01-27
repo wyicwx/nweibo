@@ -1,5 +1,8 @@
 var lib = require('../lib/lib.js');
 
+/*
+ * 个人主页
+ */
 exports.index = function(req,res) {
 	var user = lib.lib_user(req);
 	if(user.checkLogin()) {
@@ -8,6 +11,9 @@ exports.index = function(req,res) {
 	return res.template({layout:false});
 };
 
+/*
+ * 注册页面
+ */
 exports.signup = function(req,res) {
 	if(req.method === "POST") {
 		var user = lib.lib_user(req);
@@ -37,6 +43,9 @@ exports.signup = function(req,res) {
 	}
 };
 
+/*
+ * 登录页面（提交地址）
+ */
 exports.login = function(req,res) {
 	var user = lib.lib_user(req);
 	if(user.checkLogin()) {
@@ -54,6 +63,9 @@ exports.login = function(req,res) {
 	}
 };
 
+/*
+ * 注销提交
+ */
 exports.logout = function(req,res) {
 	var user = lib.lib_user(req);
 	if(user.checkLogin()) {

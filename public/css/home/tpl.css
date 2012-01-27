@@ -175,3 +175,24 @@
 	margin: 0 5px;
 	color: #E1E4E5;
 }
+
+/*
+ * @name: footer
+ * @overview: 底部footer
+ * @require: 
+ */
+.ui-footer {
+	width: 920px;
+	margin: 0px auto;
+	padding: 20px 0px;
+	background-color: white;
+	color: #E2E2E2;
+}
+.ui-footer a {
+	color: #E2E2E2; 
+}
+.ui-footer-power {
+	float: right;
+}
+
+

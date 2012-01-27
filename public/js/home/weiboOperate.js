@@ -17,8 +17,9 @@ m.domready(function() {
 				tar = data.match(tar);
 				if(!tar) return false;
 				var d = document.createElement(tar[1]);
-				d.innerHTML = data.match(/\<[^\>]+\>(.+)\<\/[a-zA-z\s]+/)[1];
-				//var cDF = document.createDocumentFragment();
+				var classname = data.match(/\<[^\>]+class=['"](.+)['"][^\>]*\>/)[1];
+				d.className = classname;
+				d.innerHTML = data.match(/\<[^\>]+\>((.||\n)+)\<\/[a-zA-z\s]+\>/)[1];
 				var child =	m.$('#weibo-feed')[0];
 				child.insertBefore(d,child.childNodes[0]);
 			}
