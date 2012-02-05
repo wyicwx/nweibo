@@ -1,5 +1,22 @@
+header {
+	
+	width: 100%;
+	min-width: 960px;
+	height: 41px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	_position: relative;
+	z-index: 400;
+	background: rgba(38, 38, 38, 0.85);
+	background: #262626	9;
+}
+header a {
+	color: white;
+}
 #main {
 	padding-top:50px;
+	padding-bottom:20px;
 }
 #main .weibo-main {
 	padding-top: 30px;

@@ -1,0 +1,5 @@
+{
+	"name" : "nweibo",
+	"main" : "./server.js",
+	"version" : 0.01
+}

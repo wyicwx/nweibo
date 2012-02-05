@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-		<title>我的首页 N微博-随时随地分享身边的新鲜事儿 </title>
+		<title>我的首页 Node SNS-随时随地分享身边的新鲜事儿 </title>
 		<meta name="description" content="" />
 		<meta name="author" content="N微博" />
 		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
@@ -12,7 +12,6 @@
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 		<link rel="stylesheet" href="/css/base.css" />
 		<link rel="stylesheet" href="/css/global.css" />
-		
 		<% if(typeof bodyCss != "undefined") {	//添加页面单独的css
 			  for(var i in bodyCss) {
 		%>
@@ -50,18 +49,20 @@
 		<!-- 底部 -->
 		<footer>
 			<div class="ui-footer">
-				<div class="ui-footer-power">
-					<a href="nodejs.org">
-						<img src="/images/nodejs_black.png" />
-					</a>
-				</div>
-				<div>
-					<small>
-					&copy;2012<br />
-					VERSION: 0.0.1<br />
-					Node Club Is Running on 
-					<a href="cnodejs.net">NAE</a>
-					</small>
+				<div class="ui-footer-div">
+					<div class="ui-footer-power">
+						<a href="nodejs.org">
+							<img src="/images/nodejs_black.png">
+						</a>
+					</div>
+					<div>
+						<small>
+						©2012<br>
+						VERSION: 0.0.1<br>
+						Node Club Is Running on 
+						<a href="cnodejs.net">NAE</a>
+						</small>
+					</div>
 				</div>
 			</div>
 		</footer>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>Node SNS-随时随地分享身边的新鲜事儿</title>
+		<meta name="description" content="" />
+		<meta name="author" content="maple" />
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<link rel="stylesheet" href="/css/base.css" />
+		<link rel="stylesheet" href="/css/global.css" />
+		<% if(typeof bodyCss != "undefined") {	//添加页面单独的css
+			  for(var i in bodyCss) {
+		%>
+		<link rel="stylesheet" href="<%- bodyCss[i] %>" />
+		<%    }
+			}
+		%>
+		<script src="/js/html5.js"></script>
+		<% if(typeof bodyJs != "undefined") {	//添加页面单独的js
+			  for(var j in bodyJs) {
+		%>
+		<script src="<%- bodyJs[j] %>"></script>
+		<%    }
+			}
+		%>
+	</head>
+	<body>
+		<div class="body-div">
+			<header>
+				<div class="ui-header">
+    			    <div class="uid-header-logo">
+                        <a href="/">NodeSNS</a>
+                    </div>
+				</div>
+			</header>
+			<%- body %>
+		</div>
+	<footer>
+		<div class="ui-footer">
+			<div class="ui-footer-div">
+				<div class="ui-footer-power">
+					<a href="nodejs.org">
+						<img src="/images/nodejs_black.png">
+					</a>
+				</div>
+				<div>
+					<small>
+					©2012<br>
+					VERSION: 0.0.1<br>
+					Node SNS Is Running on<br>
+                    <a href="cnodejs.net">NAE</a>
+                    Powered by 
+                    <a href="http://weibo.com/236008243">Maple.chen</a>(<a href="http://online.hfut.edu.cn/">hfutonline</a>)
+					</small>
+				</div>
+			</div>
+		</div>
+	</footer>
+	</body>
+</html>

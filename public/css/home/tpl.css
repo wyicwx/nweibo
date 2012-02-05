@@ -2,25 +2,19 @@
 	@ 名称: 投影 | drop shadow
 	@ 用法: 添加 .sl-shadow
 	@ 实例: 
-
       <div class="sl-shadow">
       	<!-- your context to go -->
       </div><!-- .sl-shadow -->
-
 */
-
 .sl-shadow{
 	/* modern web browsers */
 	-moz-box-shadow:1px 3px 12px #bbb;
 	-webkit-box-shadow:1px 3px 12px #bbb;
 	box-shadow:1px 3px 12px #bbb;
-
 	/* 一定要设置background, 不然 ie 会显示在字体上 */
 	background: transparent;
-
 	/* gte=ie8 */
 	-ms-filter:"progid:DXImageTransform.Microsoft.Glow(color=#aaaaaa,strength=3) progid:DXImageTransform.Microsoft.Shadow(color=#eeeeee,direction=0,strength=6) progid:DXImageTransform.Microsoft.Shadow(color=#dddddd,direction=90,strength=10) progid:DXImageTransform.Microsoft.Shadow(color=#dddddd,direction=180,strength=6) progid:DXImageTransform.Microsoft.Shadow(color=#eeeeee,direction=270,strength=6)";
-
 	/* lte=ie7 */
 	*filter:
     progid:DXImageTransform.Microsoft.Shadow(color=#eeeeee,direction=0,strength=7)
@@ -28,8 +22,6 @@
     progid:DXImageTransform.Microsoft.Shadow(color=#dddddd,direction=180,strength=10)
     progid:DXImageTransform.Microsoft.Shadow(color=#eeeeee,direction=270,strength=7);
 }
-
-
 /*
  * @name: 微博发布框
  * @overview: 发布微薄的发布框
@@ -102,12 +94,10 @@
 .ui-wTextarea-operations .vote {
 	background-position: 0 -170px;
 }
-
 /*  status   */
 .ui-wTextarea-btn .ui-wTextarea-btn-disable {
 	background-position: -403px -1px;
 }
-
 /*
  *  @name: 微博状态头像
  *  @overview: 微博头像
@@ -124,8 +114,6 @@
 	height: 50px;
 	display: block;
 }
-
-
 /*
  * @name: 微博状态
  * @overview: null
@@ -144,8 +132,6 @@
 	margin: 0 0 0 60px;
 	line-height: 22px;
 }
-
-
 /*
  * @name: 微博原文内容
  * @overview: null
@@ -153,8 +139,9 @@
  */
 .ui-publishContent {
 	padding-bottom: 10px;
+	word-wrap:break-word;
+	word-break:break-all;
 }
-
 /*
  * @name: 微博状态操作
  * @overview: null
@@ -175,17 +162,19 @@
 	margin: 0 5px;
 	color: #E1E4E5;
 }
-
 /*
  * @name: footer
  * @overview: 底部footer
  * @require: 
  */
 .ui-footer {
+	width: 100%;
+	background-color: white;
+}
+.ui-footer-div {
 	width: 920px;
 	margin: 0px auto;
 	padding: 20px 0px;
-	background-color: white;
 	color: #E2E2E2;
 }
 .ui-footer a {
@@ -194,5 +183,4 @@
 .ui-footer-power {
 	float: right;
 }
-
 

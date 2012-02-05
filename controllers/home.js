@@ -7,15 +7,14 @@ exports.index = function(req,res) {
 		return res.redirect('/');
 	};
 	var viewVar = user.get("session");
-	user.getSelfInbox(function(bl,data) {		//data为获取到的收件箱集合中自己的文档
+	user.pullWeibo(function(bl,data) {		//data为获取到的收件箱集合中自己的文档
 		if(bl === true) {
 			var inboxBody = new String();
-			if(data.box.length < 1) {
+			if(data.length < 1) {
 				inboxBody = "目前没有新微博，快去关注别人吧！";
 			} else {
-				for(var i = data.box.length-1; i > data.box.length-1-15;i--) {
-					if(i<0) break;
-					inboxBody+=views.weibo(data.box[i]);
+				for(var i = 0; i < data.length;i++) {
+					inboxBody+=views.weibo(data[i]);
 				}
 			}
 			return res.template({

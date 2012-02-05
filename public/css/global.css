@@ -1,5 +1,4 @@
 body {
-	background-image: url('/images/bg.png');
 	font: 12px/1.125 Arial,Helvetica,sans-serif;
 }
 a {
@@ -13,22 +12,7 @@ textarea {
 	resize: none;
 	outline: none;
 }
-header {
-	
-	width: 100%;
-	min-width: 960px;
-	height: 41px;
-	position: fixed;
-	left: 0;
-	top: 0;
-	_position: relative;
-	z-index: 400;
-	background: rgba(38, 38, 38, 0.85);
-	background: #262626	9;
-}
-header a {
-	color: white;
-}
+
 .global-header {
 	width: 960px;
 	margin: auto;

@@ -1,25 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-		<title>N微博-随时随地分享身边的新鲜事儿</title>
-		<meta name="description" content="" />
-		<meta name="author" content="maple" />
-		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
-		<link rel="shortcut icon" href="/favicon.ico" />
-		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-		<link rel="stylesheet" href="/css/base.css" />
-		<link rel="stylesheet" href="/css/global.css" />
-		<script src="/js/html5.js"></script>
-	</head>
-	<body>
-		<form method="post" action="/index/login">
-			<label for="username">帐号：</label><input type="text" name="username" />
-			<label for="password">密码：</label><input type="password" name="password" />
-			<label for="verify" >验证码：</label><input type="text" name="verify" />
-			<input type="submit" value="登录" />
-		</form>
-		<a href="/index/signup">注册</a>
-	</body>
-</html>
+<div class="ui-login">
+	<div class="ui-login-login">
+		<div class="ui-loginForm">
+			<form  method="post" action="/index/login">
+				<div class="ui-loginForm-row">
+					<label class="ui-loginForm-label j-label" for="username">帐号</label>
+					<input class="ui-loginForm-input text j-input" type="text" name="username" />
+				</div>
+				<div class="ui-loginForm-row">
+					<label class="ui-loginForm-label j-label" for="password">密码</label>
+					<input class="ui-loginForm-input text j-input" type="password" name="password" />
+				</div>
+				<div class="ui-loginForm-row">
+					<input type="checkbox"/>记住登录状态&nbsp&nbsp
+					<a href="/">忘记密码？</a>
+				</div>
+				<div class="ui-loginForm-row">
+					<input class="ui-loginForm-loginbtn" type="submit" value="登录" />
+					<a href="/index/signup">立即注册</a>	
+				</div>
+			</form>
+			
+		</div>
+	</div>
+</div>
+
+<div class="main fn-clear sl-shadow">
+	<div class="coll">
+        留着空白
+    </div>
+    <!-- colc -->
+    <div class="colc">
+    	<div class="colc-main">
+	        <div class="ui-happend-title">
+	            <div class="ui-top-title-title">大家正在说</div>
+	        </div>
+	        <div class="ui-happend-main">
+	        	<%- weiboBody %>
+	        	<div class="ui-happend-bottom"></div>
+	        </div>
+        </div>
+    </div>
+    <!-- colr -->
+    <div class="colr">
+        <div class="ui-top">
+            <div class="ui-top-title">
+            	<div class="fn-right ui-top-title-follow">粉丝数</div>
+                <div class="ui-top-title-title">人气排行TOP<span>10</span></div>
+            </div>
+            <div class="ui-top-main">
+            	<ul>
+            		<% for(var i in top ) { %>
+            		<li class="ui-top-main-li j-top-row">
+            			<a href="/<%= top[i].uid %>">
+            				<i class="fn-right"><%= top[i].followerNum %></i>
+            				<strong class="fn-right"><%= top[i].nickname %></strong>
+            				<var><%= (+i+1) %></var>
+            				<span class="ui-top-main-avatar">
+            					<img src="<%= top[i].avatarImage %>" />
+            				</span>
+            			</a>
+            		</li>
+            		<% } %>
+            	</ul>
+            </div>
+        </div>
+    </div>
+    <!-- colr -->
+</div>

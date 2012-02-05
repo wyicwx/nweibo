@@ -1,0 +1,38 @@
+body {
+	background-color:#FAFBFC;
+}
+.body-div {
+	background: url(/images/index_bg.png);
+     background-repeat: repeat-x;
+	padding-bottom: 40px;
+}
+.main {
+    width:960px;
+    border: 1px solid #D0D0D0;
+    border-top: none;
+    margin:0 auto;
+    background-color: #fff;
+    padding-bottom: 10px;
+}
+.coll {
+    width: 248px;
+    border-right: 1px solid #EFEFEF;
+    float: left;
+    padding: 0 15px;
+}
+.colc {
+    width: 420px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+.colc-main {
+	margin: 0 20px;
+	border: 0 none;
+}
+.colr {
+    width: 218px;
+    border-left: 1px solid #EFEFEF;
+    float: left;
+    padding: 0 15px;
+}

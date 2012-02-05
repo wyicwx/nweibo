@@ -1,5 +1,5 @@
-var lib = require('../lib/lib.js');
-
+var lib = require('../lib/lib.js'),
+	views = lib.lib_views;
 /*
  * 个人主页
  */
@@ -8,7 +8,27 @@ exports.index = function(req,res) {
 	if(user.checkLogin()) {
 		return res.redirect('/home/index');
 	}
-	return res.template({layout:false});
+	user.getTopuser(10,function(back,data) {
+		if(!back) data = [];
+		user.getIndexweibo(function(back,weibo) {
+			var weiboBody = "";
+			if(!weibo) {
+				weiboBody = "当前没有发生的事情";
+			} else {
+				for(var i = 0; i < weibo.length;i++) {
+					weiboBody += views.index_weibo(weibo[i]);
+				}
+			}
+			return res.template({
+				layout:true,
+				bodyCss:['/css/index/index-global.css','/css/index/tpl.css'],
+				bodyJs:['/js/jquery-1.7.1.min.js','/js/index.js'],
+				top:data,
+				weiboBody: weiboBody
+			});
+		})
+	})
+	
 };
 
 /*
@@ -39,7 +59,11 @@ exports.signup = function(req,res) {
 			}
 		})
 	} else {
-		return res.template({layout:false});
+		return res.template({
+			layout:true,
+			bodyCss:['/css/index/index-global.css','/css/index/tpl.css'],
+			bodyJs:['/js/jquery-1.7.1.min.js']
+		});
 	}
 };
 
