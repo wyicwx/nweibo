@@ -22,10 +22,32 @@
     progid:DXImageTransform.Microsoft.Shadow(color=#dddddd,direction=180,strength=10)
     progid:DXImageTransform.Microsoft.Shadow(color=#eeeeee,direction=270,strength=7);
 }
+/*
+ * @name: 首页logo
+ * @overview: 首页logo样式
+ * @require: null
+ */
 .ui-header {
 	height: 77px;
 	width: 960px;
 	margin: 0 auto;
+}
+.ui-header-logo {
+	width: 140px;
+	height: 100%;
+	line-height: 70px;
+}
+.ui-header-logo a {
+	color: white;
+	font-size: 3em;
+}
+/*
+ * @name: 首页导航
+ * @overview: 首页导航样式
+ * @require: null
+ */
+.ui-nav {
+	float: right;
 }
 /*
  * @name: 首页登录
@@ -243,7 +265,7 @@
 	border-color: #E1E4E5;
 }
 .ui-feed-content {
-	font-size: 14px;
+	font-size: 1.4em;
 	margin: 0 0 0 60px;
 	line-height: 22px;
 }
@@ -292,14 +314,14 @@
  * @require: 
  */
 .ui-footer {
-	width: 100%;
+	width           : 100%;
 	background-color: white;
 }
 .ui-footer-div {
-	width: 920px;
-	margin: 0px auto;
+	width  : 920px;
+	margin : 0px auto;
 	padding: 20px 0px;
-	color: #E2E2E2;
+	color  : #E2E2E2;
 }
 .ui-footer a {
 	color: #E2E2E2; 
@@ -314,11 +336,33 @@
  * @overview: 注册页面样式
  * @require: null
  */
+.ui-sign {
+	width: 960px;
+	height: 550px;
+	border: 1px solid white;
+	margin: auto;
+	background: #46382D url(/images/signup_bg.jpg) bottom no-repeat;
+	padding: 55px 26px 0 26px;
+}
 .ui-signForm {
-    width: 960px;
-    height: 550px;
-    border: 1px solid white;
-    margin: auto;
-    background: #46382D url(/images/signup_bg.jpg) bottom no-repeat;
-    padding: 55px 26px 0 26px;
+	width: 400px;
+	color: #fff;
+}
+.ui-signForm-row {
+	margin: 0 0 9px 0;
+}
+.ui-signForm-submit {
+	background: url(/images/login_btn.gif) no-repeat;
+	width: 85px;
+	height: 27px;
+	border: none;
+	color: white;
+	margin:0 0 0 120px;
+}
+.ui-signForm-input {
+	border: 1px solid #DDD;
+	outline: none;
+	padding: 2px;
+	width: 220px;
+	height: 20px;
 }

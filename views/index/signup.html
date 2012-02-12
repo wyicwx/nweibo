@@ -1,23 +1,28 @@
-<div class="ui-signForm">
-<form method="post" action="/index/signup" >
-	<div class="ui-loginForm-row">
-		<label for="nickname">昵称：</label><input class="text ui-loginForm-input" type="text" name="nickname" /><br />
+<div class="ui-sign">
+	<div class="ui-signForm">
+		<form method="post" action="/index/signup" >
+			<div class="ui-signForm-row">
+				<span>一起加入畅聊吧！</span>
+				<a href="/">已有帐号</a>
+			</div>
+			<div class="ui-signForm-row">
+				<label for="nickname">昵　　称：</label><input class="text ui-signForm-input" type="text" name="nickname" /><br />
+			</div>
+			<div class="ui-signForm-row">
+				<label for="username">帐　　号：</label><input class="text ui-signForm-input" type="text" name="username" /><br />
+			</div>
+			<div class="ui-signForm-row">
+				<label for="password">密　　码：</label><input class="text ui-signForm-input" type="password" name="password" /><br />
+			</div>
+			<div class="ui-signForm-row">
+			<label for="repassword">重复密码：</label><input class="text ui-signForm-input" type="password" name="repassword" /><br />
+			</div>
+			<div class="ui-signForm-row">
+			<label for="email"></label>电子邮箱：<input type="text" class="text ui-signForm-input" name="email"/><br />
+			</div>
+			<div class="ui-signForm-row">
+				<input class="ui-signForm-submit" type="submit" value="马上注册"/>
+			</div>
+		</form>
 	</div>
-	<div class="ui-loginForm-row">
-		<label for="username">帐号：</label><input class="text ui-loginForm-input" type="text" name="username" /><br />
-	</div>
-	<div class="ui-loginForm-row">
-		<label for="password">密码：</label><input class="text ui-loginForm-input" type="password" name="password" /><br />
-	</div>
-	<div class="ui-loginForm-row">
-	<label for="repassword">重复密码：</label><input class="text ui-loginForm-input" type="password" name="repassword" /><br />
-	</div>
-	<div class="ui-loginForm-row">
-	<label for="email"></label>电子邮箱：<input type="text" class="text ui-loginForm-input" name="email"/><br />
-	</div>
-	<div class="ui-loginForm-row">
-		<input type="submit" value="注册"/>
-		<input type="reset"  value="重置"/><br />
-	</div>
-</form>
 </div>
