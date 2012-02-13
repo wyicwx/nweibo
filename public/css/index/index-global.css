@@ -15,13 +15,13 @@ body {
     padding-bottom: 10px;
 }
 .coll {
-    width: 248px;
+    width: 210px;
     border-right: 1px solid #EFEFEF;
     float: left;
     padding: 0 15px;
 }
 .colc {
-    width: 420px;
+    width: 458px;
     float: left;
     position: relative;
     overflow: hidden;
@@ -31,7 +31,7 @@ body {
 	border: 0 none;
 }
 .colr {
-    width: 218px;
+    width: 220px;
     border-left: 1px solid #EFEFEF;
     float: left;
     padding: 0 15px;

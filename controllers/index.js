@@ -10,25 +10,28 @@ exports.index = function(req,res) {
 	}
 	user.getTopuser(10,function(back,data) {
 		if(!back) data = [];
-		user.getIndexweibo(function(back,weibo) {
-			var weiboBody = "";
-			if(!weibo) {
-				weiboBody = "当前没有发生的事情";
-			} else {
-				for(var i = 0; i < weibo.length;i++) {
-					weiboBody += views.index_weibo(weibo[i]);
+		user.getIndexAuthenticationPeople(function(back,auth) {
+			if(!back) auth = [];
+			user.getIndexweibo(function(back,weibo) {
+				var weiboBody = "";
+				if(!weibo) {
+					weiboBody = "当前没有发生的事情";
+				} else {
+					for(var i = 0; i < weibo.length;i++) {
+						weiboBody += views.index_weibo(weibo[i]);
+					}
 				}
-			}
-			return res.template({
-				layout:true,
-				bodyCss:['/css/index/index-global.css','/css/index/tpl.css'],
-				bodyJs:['/js/jquery-1.7.1.min.js','/js/index.js'],
-				top:data,
-				weiboBody: weiboBody
-			});
+				return res.template({
+					layout:true,
+					bodyCss:['/css/index/index-global.css','/css/index/tpl.css'],
+					bodyJs:['/js/jquery-1.7.1.min.js','/js/index.js'],
+					top:data,
+					weiboBody: weiboBody,
+					auth:auth
+				});
+			})
 		})
 	})
-	
 };
 
 /*

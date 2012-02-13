@@ -1,4 +1,5 @@
 <div class="ui-login">
+
 	<div class="ui-login-login">
 		<div class="ui-loginForm">
 			<form  method="post" action="/index/login">
@@ -26,7 +27,54 @@
 
 <div class="main fn-clear sl-shadow">
 	<div class="coll">
-        留着空白
+        <div class="ui-people">
+            <div class="ui-people-title">这些人正在用微博</div>
+            <div class="ui-people-content">
+                <ul class="ui-people-list">
+                    <% for(var i in auth) { %>
+                    <li class="ui-people-item">
+                        <a href="/<%= auth[i].uid %>"><img src="<%= auth[i].avatarImage %>" alt="<%= auth[i].nickname %>"><%= auth[i].nickname %></a>
+                    </li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="ui-people">
+            <div class="ui-people-title">有趣的人</div>
+            <div class="ui-people-content">
+                <ul class="ui-people-list">
+                    <li class="ui-people-item">
+                        <a href="/"><img src="http://www.gravatar.com/avatar/2308e232773916bebc0d468266296b6f.png?s=50" alt="">小枫</a>
+                    </li>
+                    <li class="ui-people-item">
+                        <a href="/"><img src="http://www.gravatar.com/avatar/2308e232773916bebc0d468266296b6f.png?s=50" alt="">小枫</a>
+                    </li>
+                    <li class="ui-people-item">
+                        <a href="/"><img src="http://www.gravatar.com/avatar/2308e232773916bebc0d468266296b6f.png?s=50" alt="">小枫</a>
+                    </li>
+                    <li class="ui-people-item">
+                        <a href="/"><img src="http://www.gravatar.com/avatar/2308e232773916bebc0d468266296b6f.png?s=50" alt="">小枫</a>
+                    </li>
+                    <li class="ui-people-item">
+                        <a href="/"><img src="http://www.gravatar.com/avatar/2308e232773916bebc0d468266296b6f.png?s=50" alt="">小枫</a>
+                    </li>
+                    <li class="ui-people-item">
+                        <a href="/"><img src="http://www.gravatar.com/avatar/2308e232773916bebc0d468266296b6f.png?s=50" alt="">小枫</a>
+                    </li>
+                    <li class="ui-people-item">
+                        <a href="/"><img src="http://www.gravatar.com/avatar/2308e232773916bebc0d468266296b6f.png?s=50" alt="">小枫</a>
+                    </li>
+                    <li class="ui-people-item">
+                        <a href="/"><img src="http://www.gravatar.com/avatar/2308e232773916bebc0d468266296b6f.png?s=50" alt="">小枫</a>
+                    </li>
+                    <li class="ui-people-item">
+                        <a href="/"><img src="http://www.gravatar.com/avatar/2308e232773916bebc0d468266296b6f.png?s=50" alt="">小枫</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
     <!-- colc -->
     <div class="colc">
