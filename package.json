@@ -1,5 +1,19 @@
 {
 	"name" : "nweibo",
 	"main" : "./server.js",
-	"version" : 0.01
+	"version" : 0.01,
+	"dependencies": {
+		"routing":"*",
+		"ezcrypto":"*",
+		"mongoskin":"*"
+	},
+	"devDependencies" : {
+		"routing":"*",
+		"ezcrypto":"*",
+		"mongoskin":"*"
+	},
+	"license" : "MIT",
+	"engine" : {
+		"node":">=0.4"
+	},	
 }

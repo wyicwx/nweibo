@@ -1,36 +1,47 @@
 var lib = require('../lib/lib.js'),
-	views = lib.lib_views;
+	views = lib.lib_views,
+	EventProxy = require("eventproxy").EventProxy;
 /*
  * 个人主页
  */
 exports.indexAction = function(req,res) {
-	var user = lib.lib_user(req);
+	var user = lib.lib_user(req),
+		proxy = new EventProxy();
 	if(user.checkLogin()) {
 		return res.redirect('/home/index');
 	}
+	
+	proxy.assign("getTopuser","getIndexAuthenticationPeople","getIndexweibo",function(data,auth,weiboBody) {
+		res.template({
+			layout:true,
+			bodyCss:['/css/index/index-global.css','/css/index/tpl.css'],
+			bodyJs:['/js/jquery-1.7.1.min.js','/js/index.js'],
+			top:data,
+			weiboBody: weiboBody,
+			auth:auth
+		});
+	})
+
 	user.getTopuser(10,function(back,data) {
 		if(!back) data = [];
-		user.getIndexAuthenticationPeople(function(back,auth) {
-			if(!back) auth = [];
-			user.getIndexweibo(function(back,weibo) {
-				var weiboBody = "";
-				if(!weibo) {
-					weiboBody = "当前没有发生的事情";
-				} else {
-					for(var i = 0; i < weibo.length;i++) {
-						weiboBody += views.index_weibo(weibo[i]);
-					}
-				}
-				return res.template({
-					layout:true,
-					bodyCss:['/css/index/index-global.css','/css/index/tpl.css'],
-					bodyJs:['/js/jquery-1.7.1.min.js','/js/index.js'],
-					top:data,
-					weiboBody: weiboBody,
-					auth:auth
-				});
-			})
-		})
+		proxy.trigger("getTopuser",data);
+	})
+
+	user.getIndexAuthenticationPeople(function(back,auth) {
+		if(!back) auth = [];
+		proxy.trigger("getIndexAuthenticationPeople",auth);
+	})
+	
+	user.getIndexweibo(function(back,weibo) {
+		var weiboBody = "";
+		if(!weibo) {
+			weiboBody = "当前没有发生的事情";
+		} else {
+			for(var i = 0; i < weibo.length;i++) {
+				weiboBody += views.index_weibo(weibo[i]);
+			}
+		}
+		proxy.trigger("getIndexweibo",weiboBody);
 	})
 };
 
