@@ -27,6 +27,7 @@
 		<%    }
 			}
 		%>
+		<script type="text/javascript" src="/js/nav.js"></script>
 	</head>
 	<body>
 		<!-- 顶部导航 -->
@@ -38,8 +39,73 @@
 					</a>
 				</div>
 				<div class="nav fn-left"></div>
-				<div class="search fn-left"></div>
-				<div class="person fn-left"><a href="/index/logout">注销</a></div>
+				
+				<!-- person -->
+				<div class="person fn-right css3-nav-list">
+					<a class="ui-nav-control-first-item">帐号</a>
+					<div class="ui-nav-control-list fn-disp-hide css3-nav-item">
+						<dl class="ui-nav-control">
+							<dd class="ui-nav-control-item">
+								<a href="/">找人</a>
+							</dd>
+							<dd class="ui-nav-control-item">
+								<a href="/">设置</a>
+							</dd>
+							<dd class="ui-nav-control-split"></dd>
+							<dd class="ui-nav-control-item">
+								
+								<a href="/index/logout">退出</a>
+							</dd>
+						</dl>
+					</div>
+				</div>
+				<!-- /person -->
+
+				<!-- message -->
+				<div class="message fn-right css3-nav-list">
+					<a class="ui-nav-control-first-item">消息</a>
+					<div class="ui-nav-control-list fn-disp-hide css3-nav-item">
+						<dl class="ui-nav-control">
+							<dd class="ui-nav-control-item">
+								<a href="/">查看私信</a>
+							</dd>
+							<dd class="ui-nav-control-item">
+								<a href="/">查看@我</a>
+							</dd>
+							<dd class="ui-nav-control-item">
+								<a href="/">查看评论</a>
+							</dd>
+							<dd class="ui-nav-control-item">
+								<a href="/">系统通知</a>
+							</dd>
+							<dd class="ui-nav-control-item">
+								<a href="/">应用消息</a>
+							</dd>
+							<dd class="ui-nav-control-split"></dd>
+							<dd class="ui-nav-control-item">
+								
+								<a href="/">发私信</a>
+							</dd>
+						</dl>
+					</div>
+				</div>
+				<!-- /message -->
+
+				<!-- user -->
+				<div class="user fn-right">
+					<a href="/<%= variable.uid %>"><%= variable.nickname %></a>
+				</div>
+				<!-- /person -->
+
+				<!-- search -->
+				<div class="toolbar fn-clear">
+					<div class="search fn-left ">
+						<label class="fn-abs toolbar-label j-toolbar-label">搜索微博、找人</label>
+						<input class="toolbar-input j-toolbar-input" type="text">
+					</div>
+				</div>
+				<!-- /seach -->
+
 			</div>
 		</header>
 		<!--/顶部导航-->

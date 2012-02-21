@@ -1,5 +1,4 @@
 header {
-	
 	width: 100%;
 	min-width: 960px;
 	height: 41px;
@@ -8,11 +7,11 @@ header {
 	top: 0;
 	_position: relative;
 	z-index: 400;
-	background: rgba(38, 38, 38, 0.85);
-	background: #262626	9;
+	background: #1F1F1F;
 }
 header a {
 	color: white;
+	text-decoration: none;
 }
 #main {
 	padding-top:50px;
@@ -35,7 +34,6 @@ header a {
 #content #content-left {
 	width: 150px;
 	background-color: white;
-	opacity: 0.5;
 	-ms-filter:Alpha(Opacity=50);
 }
 #content #content-list {
@@ -72,4 +70,124 @@ header a {
 	width: 100%;
 	height: 22px;
 	border-top: 1px solid #D0CFCF;
+}
+.message, .person {
+	position: relative;
+	margin: 2px 0px 0px 0px;
+}
+.user {
+	
+}
+.user a {
+	padding: 11px;
+	display: block;
+	cursor: auto;
+}
+.user a:hover {
+	background-color: #313131; 
+}
+.toolbar {
+	display: block;
+	margin-left: 300px;
+	padding-top: 8px;
+}
+.toolbar-label {
+	line-height: 24px;
+	color:#999;
+	cursor: text;
+}
+
+.toolbar-input {
+	border: none;
+	height: 24px;
+	margin-right: 14px;
+	color: #999;
+	background: transparent;
+}
+.dl-hover {
+	background-color: white;
+}
+.dl-hover>a {
+	color: black;
+}
+.search {
+	position: relative;
+	height: 24px;
+	padding: 2px 0 0 30px;
+	background: #fff url(/images/icon_search.png) 8px 3px no-repeat;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+}
+/*
+ * @name: ui-nav-control-hidden
+ * @overview: 
+ * @require: null
+ */
+.ui-nav-control {
+	width: 116px;
+	padding: 2px;
+}
+.ui-nav-control-show {
+	height: 40px;
+}
+.ui-nav-control-list {
+	position: absolute;
+	right: -1px;
+	background-color: white;
+	border: 1px solid black;
+	border-top: 0px;
+}
+.ui-nav-control-list a {
+	color: #595959;
+	font-size: 1.2em;
+	display: block;
+	padding: 3px 10px;
+	text-decoration: none;
+	cursor: pointer;
+}
+.ui-nav-control-list a:hover {
+	background-color: #E8E9EA;
+}
+.ui-nav-control-first-item {
+	padding: 10px 10px 11px 10px;
+	display: block;
+	cursor: pointer;
+}
+.ui-nav-control-item {
+	
+}
+.ui-nav-control-split {
+	margin:0 2px;
+	border-top: 1px solid #999;
+}
+
+
+
+.css3-nav-item {
+    -webkit-transition-property: opacity;
+    -webkit-transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-in-out;
+}
+.css3-nav-list {
+    -webkit-transition-property: background-color;
+    -webkit-transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-in-out;
+}
+.css3-nav-list {
+	overflow: hidden;
+}
+.css3-nav-list:hover {
+	background-color: white;
+	overflow: visible;
+}
+.css3-nav-list:hover>a {
+	color: black;
+}
+.css3-nav-list>.css3-nav-item {
+	display: block;
+	opacity: 0;
+}
+.css3-nav-list:hover>.css3-nav-item {
+	display: block;
+	opacity: 1;
 }
